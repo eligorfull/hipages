@@ -1,0 +1,34 @@
+<mat-card class="example-card mat-elevation-z2">
+  <mat-card-header>
+    <div mat-card-avatar class="header-image">
+      <span matBadge="{{job.contactName.charAt(0)}}" matBadgeSize="large"></span>
+    </div>
+    <mat-card-title class="title-card">{{job.contactName}}</mat-card-title>
+    <mat-card-subtitle>{{job.createdAt | date: 'MMMM d @ h:mm a'}}</mat-card-subtitle>
+  </mat-card-header>
+  <hr/>
+  <mat-card-content>
+    <div class="content-container">
+      <span class="content-item">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">place</mat-icon> {{job.suburb.name}} {{job.suburb.postcode}}</span>
+      <span class="content-item">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">card_travel</mat-icon> {{job.category.name}}
+      </span>
+      <span class="content-item">Job ID: {{job.id}}</span>
+      <span class="content-item" *ngIf="job.status === 'new'">{{job.price | currency}} Lead Invitation</span>
+    </div>
+    <div class="content-container" *ngIf="job.status === 'new'">
+      <hr/>
+      <span class="content-item">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">phone</mat-icon> {{job.contactPhone}}</span>
+      <span class="content-item">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">email</mat-icon> {{job.contactEmail}}
+      </span>
+    </div>
+    <p>{{job.description}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-stroked-button class="accept-button" (click)="onAcceptJob()">Accept</button>
+    <button mat-stroked-button class="decline-button" (click)="onDeclineJob()">Decline</button>
+  </mat-card-actions>
+</mat-card>

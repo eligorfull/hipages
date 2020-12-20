@@ -1,0 +1,34 @@
+.example-card {
+  max-width: 500px;
+  margin: 10px;
+}
+
+.title-card {
+  margin: 0px;
+}
+
+::ng-deep .mat-card-header-text {
+  margin: unset !important;
+}
+
+.header-image {
+  padding-top: 15px;
+  padding-left: 12px;
+}
+
+.accept-button {
+  background-color: #ff6600;
+  color: white;
+}
+
+.decline-button {
+  background-color: lightgray;
+}
+
+.content-container {
+  padding-bottom: 5px;
+}
+
+.content-item {
+  padding-right: 20px;
+}

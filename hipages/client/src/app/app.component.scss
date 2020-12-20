@@ -1,0 +1,24 @@
+.toolbar {
+  position: absolute;
+  padding-top: 25px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #ff6600;
+  color: white;
+  font-weight: 600;
+}
+
+.content {
+  margin: 100px 30px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+}
+
+.tech-title {
+  padding-left: 15px;
+}
