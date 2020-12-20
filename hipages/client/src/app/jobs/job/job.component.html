@@ -15,9 +15,9 @@
         <mat-icon aria-hidden="false" aria-label="Example home icon">card_travel</mat-icon> {{job.category.name}}
       </span>
       <span class="content-item">Job ID: {{job.id}}</span>
-      <span class="content-item" *ngIf="job.status === 'new'">{{job.price | currency}} Lead Invitation</span>
+      <span class="content-item" *ngIf="job.status === 'accepted'">{{job.price | currency}} Lead Invitation</span>
     </div>
-    <div class="content-container" *ngIf="job.status === 'new'">
+    <div class="content-container" *ngIf="job.status === 'accepted'">
       <hr/>
       <span class="content-item">
         <mat-icon aria-hidden="false" aria-label="Example home icon">phone</mat-icon> {{job.contactPhone}}</span>
